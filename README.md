@@ -22,3 +22,15 @@ ON employees.department_id = departments.id;
     INNER JOIN locations AS loc
     ON dep.location_id = loc.id;
 ```
+# insert, delete, update
+```bash
+INSERT INTO jobs (title, min_salary, max_salary)
+VALUES ('Business Analyst', 8000, 12000);
+```
+```bash
+UPDATE jobs
+SET min_salary = 3500
+WHERE min_salary < 3500;
+```
+
+
