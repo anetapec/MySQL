@@ -12,6 +12,16 @@ ON employees.department_id = departments.id;
     ON locations.id = departments.location_id
     ORDER BY locations.city;
 ```
+```bash
+    SELECT emp.first_name, dep.department_name, loc.city
+    FROM employees AS emp
+    INNER JOIN departments AS dep
+    ON emp.department_id = dep.id
+    INNER JOIN locations AS loc
+    ON dep.location_id = loc.id
+    WHERE emp.department_id IN (1,6)
+    ORDER BY emp.first_name;
+```
 
 ```bash
 
