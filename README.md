@@ -64,4 +64,25 @@ WHERE min_salary < 3500;
      
     SELECT * FROM departments;
 ```
+```bash
+    DELETE FROM employees
+    WHERE first_name = 'Adam' 
 
+    AND last_name = 'Irwin';
+```
+
+```bash
+    DELETE FROM employees
+    WHERE email LIKE '%@gmail.com';
+     
+ ```
+```bash
+    DELETE employees FROM employees
+    INNER JOIN departments
+    ON employees.department_id = departments.id
+    INNER JOIN locations
+    ON departments.location_id = locations.id
+    WHERE locations.city = 'Gdynia';
+     
+    SELECT * FROM employees;
+```
