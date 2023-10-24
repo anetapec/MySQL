@@ -32,5 +32,36 @@ UPDATE jobs
 SET min_salary = 3500
 WHERE min_salary < 3500;
 ```
+```bash
+    UPDATE employees
+    SET email = REPLACE(email, '@yahoo.com', '@gmail.com')
+    WHERE job_id = 2;
+     
+    SELECT * FROM employees
+    WHERE job_id = 2;
+```
 
+# zwiększ min salary o 5% 
+# min_salary * 1,05 !!!
+```bash
+    UPDATE jobs
+    SET min_salary = min_salary * 1.05;
+     
+    SELECT * FROM jobs;
+```
+```bash
+    UPDATE departments
+    SET location_id =
+    (
+        SELECT id FROM locations
+        WHERE city = 'Opole'
+    )
+    WHERE location_id =
+    (
+        SELECT id FROM locations
+        WHERE city = 'Cracow'
+    );
+     
+    SELECT * FROM departments;
+```
 
