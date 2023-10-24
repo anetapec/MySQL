@@ -86,3 +86,9 @@ WHERE min_salary < 3500;
      
     SELECT * FROM employees;
 ```
+```bash
+DELETE FROM employees
+WHERE department_id = 3
+ORDER BY birth_date DESC
+LIMIT 1;
+```
