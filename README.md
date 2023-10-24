@@ -102,3 +102,22 @@ WHERE department_id = 3
 ORDER BY birth_date DESC
 LIMIT 1;
 ```
+```bash
+    SELECT department_id, COUNT(*) AS number_of_employees
+    FROM employees
+    GROUP BY department_id;
+```
+
+# ile jest działów w każdym mieście !!!
+```bash
+    SELECT locations.city, COUNT(departments.id) AS number_of_departments
+    FROM locations 
+    LEFT JOIN departments 
+    ON departments.location_id = locations.id
+    GROUP BY locations.city;
+``
+# ilu jest pracowników na każdym stanowisku pracy w poszczególnych działach
+```bash
+    SELECT department_id, job_id, COUNT(*) AS number_of_employees
+    FROM employees
+    GROUP BY department_id, job_id;
